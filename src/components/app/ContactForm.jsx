@@ -84,8 +84,8 @@ const ContactForm = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          from_name: data.name.trim(),
-          from_email: data.email.trim(),
+          name: data.name.trim(),
+          email: data.email.trim(),
           subject: data.subject.trim(),
           message: data.message.trim(),
         },

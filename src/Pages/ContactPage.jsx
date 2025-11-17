@@ -5,7 +5,7 @@ import React from "react";
 
 const ContactPage = () => {
   return (
-    <Center>
+    <Center minH={"100vh"}>
       <Stack align={"center"} mt={50} gap={5}>
         <Text
           fontSize={{ base: "2xl", md: "3xl" }}

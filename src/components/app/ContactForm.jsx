@@ -7,9 +7,8 @@ import {
   Textarea,
   VStack,
 } from "@chakra-ui/react";
-import { animate, AnimatePresence, easeOut, motion } from "framer-motion";
-import React, { useMemo } from "react";
-import { useState, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";

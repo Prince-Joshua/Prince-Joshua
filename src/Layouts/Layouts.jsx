@@ -22,7 +22,7 @@ const Layouts = () => {
   return Loading ? (
     <PreLoader />
   ) : (
-    <Container maxW={"breakpoint-2xl"}>
+    <Box>
       <Box minH={"fit-content"} flexGrow={1}>
         <Toaster />
         <Header />
@@ -30,7 +30,7 @@ const Layouts = () => {
         <Outlet />
       </Box>
       <Footer />
-    </Container>
+    </Box>
   );
 };
 

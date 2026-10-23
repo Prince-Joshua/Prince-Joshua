@@ -21,10 +21,10 @@ import { SiX } from "react-icons/si";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: BsInstagram, url: "www.instagram.com" },
-    { icon: FaLinkedin, url: "www.instagram.com" },
-    { icon: SiX, url: "www.instagram.com" },
-    { icon: FaGithub, url: "www.instagram.com" },
+    { icon: BsInstagram, url: "www.instagram.com", color: "accent.red" },
+    { icon: FaLinkedin, url: "www.instagram.com", color: "primary.default" },
+    { icon: SiX, url: "www.instagram.com", color: "fg.default" },
+    { icon: FaGithub, url: "www.instagram.com", color: "fg.mute" },
   ];
   const MotionStack = motion.create(Stack);
   const MotionHStack = motion.create(HStack);
@@ -64,7 +64,7 @@ const Footer = () => {
   };
 
   return (
-    <Container mt={10}>
+    <Container mt={10} px={{ base: 6, md: 10 }}>
       <HeadingText text={"Get In Touch! "} />
       <MotionStack
         mb={5}
@@ -78,7 +78,7 @@ const Footer = () => {
         }}
       >
         <HStack gap={4}>
-          {socialLinks.map(({ icon, url }, index) => {
+          {socialLinks.map(({ icon, url, color }, index) => {
             return (
               <MotionBox key={index} variants={childVariants}>
                 <Link href={url} target="_blank" rel="noopener noreferrer">
@@ -86,6 +86,7 @@ const Footer = () => {
                     as={icon}
                     cursor={"pointer"}
                     boxSize={5}
+                    color={'fg.default'}
                     _hover={{ color: "secondary.default" }}
                     transition={"all 0.35s ease-in"}
                   />
@@ -127,7 +128,7 @@ const Footer = () => {
       </MotionStack>
 
       <Text textAlign={"center"} mb={4}>
-        &copy; 2025 Prince Joshua
+        {new Date().getFullYear()} Prince Joshua
       </Text>
     </Container>
   );
